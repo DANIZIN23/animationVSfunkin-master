@@ -1,3 +1,4 @@
+#if windows 
 import flixel.FlxG;
 import flixel.FlxSprite;
 
@@ -38,3 +39,4 @@ class CutsceneState extends MusicBeatState
 		super.create();
 	}
 }
+#end
