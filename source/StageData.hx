@@ -1,11 +1,11 @@
 package;
 
-#if MODS_ALLOWED
+
 import sys.io.File;
 import sys.FileSystem;
-#else
+
 import openfl.utils.Assets;
-#end
+
 import haxe.Json;
 import haxe.format.JsonParser;
 import Song;
@@ -62,7 +62,7 @@ class StageData {
 
 	public static function getStageFile(stage:String):StageFile {
 		var rawJson:String = null;
-		var path:String = Paths.getPreloadPath('stages/' + stage + '.json');
+		var path:String = SUtil.getPath() + Paths.getPreloadPath('stages/' + stage + '.json');
 
 		#if MODS_ALLOWED
 		var modPath:String = Paths.modFolders('stages/' + stage + '.json');
