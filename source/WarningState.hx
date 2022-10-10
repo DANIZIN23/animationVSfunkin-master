@@ -16,7 +16,7 @@ class WarningState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
-	var video:MP4Handler = new MP4Handler();
+	
 	var warnText:FlxText;
 	var isCutscene:Bool = false;
 	var thesongnamename = '';
