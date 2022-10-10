@@ -93,6 +93,7 @@ class TitleState extends MusicBeatState
 		FlxG.log.add("Settings saved!");
 		#if sys
 	//	if (!sys.FileSystem.exists("assets/dud.png")) {
+			{
 			var save:FlxSave = new FlxSave();
 			save.bind('avfnf', 'ninjamuffin99');
 			save.data.dud = true;
