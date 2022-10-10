@@ -41,7 +41,7 @@ class FlashingState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.ENTER) {
+		if (controls.ACCEPT) {
 			var save:FlxSave = new FlxSave();
 			save.bind('avfnf', 'ninjamuffin99');
 			save.data.flashinglol = true;
@@ -53,7 +53,7 @@ class FlashingState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('cancelMenu'));
             FlxTween.tween(warnText, {alpha: 0}, 1, {
             });
-		} else if (FlxG.keys.justPressed.ESCAPE) {
+		} else if (controls.BACK) {
 			var save:FlxSave = new FlxSave();
 			save.bind('avfnf', 'ninjamuffin99');
 			save.data.flashinglol = true;
