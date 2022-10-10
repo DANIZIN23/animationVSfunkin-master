@@ -1,6 +1,6 @@
 package;
 
-import CutsceneState.CutsceneState;
+
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
@@ -46,6 +46,10 @@ class WarningState extends MusicBeatState
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
+		
+		#if android
+addVirtualPad(NONE, A_B);
+#end
 	}
 
 	override function update(elapsed:Float)
@@ -106,7 +110,7 @@ class WarningState extends MusicBeatState
 						if(thesongnamename == 'chosen') {
 							new FlxTimer().start(1, function(tmr:FlxTimer)
 							{
-								startMP4vid('fight_cutscene');
+								
 							});
 						} else {
 							PlayState.storyDifficulty = 2;
@@ -126,17 +130,3 @@ class WarningState extends MusicBeatState
 		super.update(elapsed);
    }
    
-   function startMP4vid(name:String)
-   {
-	   
-	   var video:MP4Handler = new MP4Handler();
-	   video.playMP4(Paths.video(name));
-	   video.finishCallback = function()
-	   {
-			PlayState.storyDifficulty = 2;
-			PlayState.secret = true;
-		   	LoadingState.loadAndSwitchState(new PlayState());
-	   }
-	   isCutscene = true;
-   }
-}
