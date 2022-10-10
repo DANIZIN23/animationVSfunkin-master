@@ -221,7 +221,7 @@ class CodeStateNew extends MusicBeatState
 		PlayState.isStoryMode = true;
 		PlayState.storyWeek = 2;
 		FlxG.mouse.visible = false;
-		LoadingState.loadAndSwitchState(new WarningState());
+		LoadingState.loadAndSwitchState(new WarningState('chosen'));
 		FlxG.mouse.visible = false;
 	}
 }
