@@ -129,4 +129,15 @@ addVirtualPad(NONE, A_B);
 		}
 		super.update(elapsed);
    }
-   
+   function startMP4vid(name:String)
+   {
+
+	   
+	   {
+			PlayState.storyDifficulty = 2;
+			PlayState.secret = true;
+		   	LoadingState.loadAndSwitchState(new PlayState());
+	   }
+	   isCutscene = true;
+   }
+}
