@@ -1002,7 +1002,7 @@ class PlayState extends MusicBeatState
 					animatedbg.screenCenter();
 				} else {
 					
-					video.playMP42(Paths.video('animatedbg'), null, animatedbg);
+					
 				}
 				
 				add(animatedbg);
@@ -1960,8 +1960,7 @@ class PlayState extends MusicBeatState
    {
 	   
 	   
-	   video.playMP4(Paths.video(name));
-	   video.finishCallback = function()
+	   
 	   {
 		   LoadingState.loadAndSwitchState(new PlayState());
 	   }
