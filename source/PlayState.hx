@@ -3993,8 +3993,7 @@ class PlayState extends MusicBeatState
 					} else {
 						FlxG.sound.playMusic(Paths.music('nothin'), 0);
 						
-						video.playMP4(Paths.video('cutscene_end'));
-						video.finishCallback = function()
+						
 						{
 							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
